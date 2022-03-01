@@ -40,6 +40,7 @@ class AddDialog(a: Activity) : Dialog(a) {
             val note = Note(date, et_note.text.toString())
             RealmManager.instance!!.saveNote(note)
             MainActivity.notes.add(note)
+            //adaptetni yangilash
             MainActivity.adapter.notifyDataSetChanged()
             dismiss()
         }
